@@ -46,7 +46,7 @@ pipeline{
         stage ('Update K8s Deployment File'){
             environment {
             GIT_REPO_NAME = "Jenkins-Zero-To-Hero"
-            GIT_USER_NAME = "mnidevops"
+            GIT_USER_NAME = "Five-Projects"
         }
             steps{
             withCredentials([string(credentialsId: 'github', variable: 'GITHUB_TOKEN')]) {
