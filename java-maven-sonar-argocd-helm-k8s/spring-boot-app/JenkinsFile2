@@ -44,6 +44,7 @@ pipeline{
             }
         
         stage ('Update K8s Deployment File'){
+            steps{
             withCredentials([string(credentialsId: 'github', variable: 'GITHUB_TOKEN')]) {
                 sh '''
                     git config user.email "mnidevops@gmail.com"
@@ -57,4 +58,5 @@ pipeline{
             }
             }
         }
-    }
+     }
+ }
